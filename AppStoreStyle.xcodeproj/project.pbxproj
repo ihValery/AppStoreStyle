@@ -11,6 +11,9 @@
 		80A2BBFE26C4C37E000A7606 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFD26C4C37E000A7606 /* ContentView.swift */; };
 		80A2BC0026C4C382000A7606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A2BBFF26C4C382000A7606 /* Assets.xcassets */; };
 		80A2BC0326C4C382000A7606 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A2BC0226C4C382000A7606 /* Preview Assets.xcassets */; };
+		80A2BC1326C4C93F000A7606 /* ScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BC1226C4C93F000A7606 /* ScreenBounds.swift */; };
+		80A2BC1526C57F53000A7606 /* LogoTurnsDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BC1426C57F53000A7606 /* LogoTurnsDismiss.swift */; };
+		80A2BC1726C581B1000A7606 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BC1626C581B1000A7606 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		80A2BBFF26C4C382000A7606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80A2BC0226C4C382000A7606 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80A2BC0426C4C382000A7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80A2BC1226C4C93F000A7606 /* ScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBounds.swift; sourceTree = "<group>"; };
+		80A2BC1426C57F53000A7606 /* LogoTurnsDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTurnsDismiss.swift; sourceTree = "<group>"; };
+		80A2BC1626C581B1000A7606 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */,
-				80A2BBFD26C4C37E000A7606 /* ContentView.swift */,
-				80A2BBFF26C4C382000A7606 /* Assets.xcassets */,
-				80A2BC0426C4C382000A7606 /* Info.plist */,
-				80A2BC0126C4C382000A7606 /* Preview Content */,
+				80A2BC1026C4C8BB000A7606 /* ViewModel */,
+				80A2BC1126C4C8C5000A7606 /* View */,
+				80A2BC0A26C4C398000A7606 /* System32 */,
 			);
 			path = AppStoreStyle;
 			sourceTree = "<group>";
@@ -67,6 +72,34 @@
 				80A2BC0226C4C382000A7606 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80A2BC0A26C4C398000A7606 /* System32 */ = {
+			isa = PBXGroup;
+			children = (
+				80A2BBFF26C4C382000A7606 /* Assets.xcassets */,
+				80A2BC0426C4C382000A7606 /* Info.plist */,
+				80A2BC0126C4C382000A7606 /* Preview Content */,
+			);
+			path = System32;
+			sourceTree = "<group>";
+		};
+		80A2BC1026C4C8BB000A7606 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				80A2BC1226C4C93F000A7606 /* ScreenBounds.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		80A2BC1126C4C8C5000A7606 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80A2BBFD26C4C37E000A7606 /* ContentView.swift */,
+				80A2BC1426C57F53000A7606 /* LogoTurnsDismiss.swift */,
+				80A2BC1626C581B1000A7606 /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A2BC1326C4C93F000A7606 /* ScreenBounds.swift in Sources */,
 				80A2BBFE26C4C37E000A7606 /* ContentView.swift in Sources */,
+				80A2BC1526C57F53000A7606 /* LogoTurnsDismiss.swift in Sources */,
 				80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */,
+				80A2BC1726C581B1000A7606 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +304,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"AppStoreStyle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppStoreStyle/System32/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppStoreStyle/Info.plist;
+				INFOPLIST_FILE = AppStoreStyle/System32/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,10 +326,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"AppStoreStyle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppStoreStyle/System32/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppStoreStyle/Info.plist;
+				INFOPLIST_FILE = AppStoreStyle/System32/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
