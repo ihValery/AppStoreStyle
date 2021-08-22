@@ -4,4 +4,5 @@
     - Повторить скрол из AppStore
     - реализовать максимально точно данный дизайн
 
-Разобратьс с GeometryReader
+Разобратьс с GeometryReader!
+Ljltkfnm
