@@ -6,3 +6,4 @@
 
 Разобратьс с GeometryReader!
 Ljltkfnm
+доделать
