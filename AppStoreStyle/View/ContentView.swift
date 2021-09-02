@@ -12,28 +12,28 @@ struct ContentView: View {
     @State private var isOn = false
     
     var body: some View {
-        ScrollView {
-            Group {
+        ZStack {
+            //Логотип медленно превращаеться в шо..
+            LogoTurnsDismiss(color: .purple, isOn: $isOn) {
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
+                    isOn = false
+                }
+            }
+            .zIndex(1)
+            
+            ScrollView {
                 ZStack(alignment: .top) {
-                    VStack {
-                        Text(screen.tempText)
-                            .font(.body)
-                            .padding(.vertical, 20)
-                            .padding(.horizontal, 20)
-                    }
-                    .frame(maxHeight: isOn ? .infinity : screen.hCard)
-                    .offset(y:  isOn ? screen.hCardOn : 0)
-                    //offset и чтобы скролл захватил все - добавляем padding снизу
-                    .padding(.bottom, isOn ? screen.height / 2 : 0)
-                    .animation(.spring(dampingFraction: 0.7))
+                    TitleView(isOn: $isOn)
                     
-                    CardView(isOn: $isOn).opacity(1)
+                    CardView(isOn: $isOn)
                         .onTapGesture {
-                            isOn.toggle()
+                            withAnimation(.easeInOut) {
+    //                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
+                                isOn.toggle()
+                            }
                         }
                 }
             }
-            .frame(maxWidth: .infinity)
         }
     }
 }
