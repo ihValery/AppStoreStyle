@@ -16,13 +16,13 @@ struct TitleCard: View {
             VStack(alignment: .leading) {
                 Text("Giannis")
                     .font(.title.bold())
-                    .foregroundColor(.white)
+                    .foregroundColor(isOn ? .bucksLogo : .white)
                 Text("Antetokounmpo")
                     .font(.title.bold())
-                    .foregroundColor(.white)
-                
-                Text("Смещение \(Int(offset))")
-                    .foregroundColor(.white.opacity(0.2))
+                    .foregroundColor(isOn ? .bucksLogo : .white)
+//                
+//                Text("Смещение \(Int(offset))")
+//                    .foregroundColor(.white.opacity(0.2))
                 
                 Spacer()
             }

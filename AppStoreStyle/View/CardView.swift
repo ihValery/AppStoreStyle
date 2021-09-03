@@ -31,9 +31,7 @@ struct CardView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: isOn ? screen.heightCardImageOn : screen.heightCardImage, alignment: .bottom)
-//                                .cornerRadius(1)
                                 .scaleEffect(isOn && scrollUp ? 1 + offset / 500 : 1)
-                                .opacity(0.1)
                         }
                     }
                 }
@@ -50,14 +48,18 @@ struct CardView: View {
                         
                         Spacer()
                         
-                        Text("34")
-                            .font(.largeTitle)
-                            .fontWeight(.black)
-                            .foregroundColor(.white)
-                            .frame(height: 100)
-                            .padding(.trailing)
+                        VStack {
+                            Text("34")
+                                .font(.system(size: 70))
+                                .fontWeight(.black)
+                            Text("Forward")
+                                .bold()
+                                .offset(y: -15)
+                        }
+                        .foregroundColor(.bucksLogo)
+                        .padding(.trailing, 10)
                     }
-                    .offset(y: isOn && scrollUp ? offset / 20 : 0)
+                    .offset(y: isOn && !scrollUp ? -(offset / 2) : 0)
                 )
                 .background(Color.bucks)
                 .clipShape(CustomCorners(corner: cornerScreenAndIsOn(), radius: 30))
