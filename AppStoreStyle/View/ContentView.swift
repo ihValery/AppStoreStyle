@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             //Логотип медленно превращаеться в шо..
-            LogoTurnsDismiss(color: .purple, isOn: $isOn) {
+            LogoTurnsDismiss(color: .bucks, isOn: $isOn) {
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
                     isOn = false
                 }
@@ -23,7 +23,7 @@ struct ContentView: View {
             
             ScrollView {
                 ZStack(alignment: .top) {
-                    TitleView(isOn: $isOn)
+                    TextAboutPlayer(isOn: $isOn)
                     
                     CardView(isOn: $isOn)
                         .onTapGesture {
