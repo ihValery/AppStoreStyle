@@ -28,7 +28,6 @@ struct ContentView: View {
                     CardView(isOn: $isOn)
                         .onTapGesture {
                             withAnimation(.easeInOut) {
-    //                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
                                 isOn.toggle()
                             }
                         }
