@@ -25,7 +25,7 @@ struct LogoTurnsDismiss: View {
                         .background(Color.white.opacity(0.5))
                         .clipShape(Circle())
                         .rotationEffect(.degrees(isOn ? 0 : -360))
-                        .opacity(isOn ? 1 : 0)
+                        .scaleEffect(isOn ? 1 : 0)
                 })
             }
             .padding(.top)

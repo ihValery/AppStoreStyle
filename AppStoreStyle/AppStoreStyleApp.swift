@@ -11,7 +11,9 @@ import SwiftUI
 struct AppStoreStyleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let player = players[0]
+            VisitingCard(player: player)
+//            ContentView()
         }
     }
 }

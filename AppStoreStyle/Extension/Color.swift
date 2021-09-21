@@ -9,5 +9,5 @@ import SwiftUI
 
 extension Color {
     static var bucks = Color("Bucks")
-    static var bucksLogo = Color("BucksLogo")
+    static var heat = Color("Heat")
 }

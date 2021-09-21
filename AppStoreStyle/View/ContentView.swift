@@ -8,30 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    var screen = ScreenBounds()
-    @State private var isOn = false
+//    var player: Player
+//    var screen = ScreenBounds()
+//    @State private var isOn = false
     
     var body: some View {
-        ZStack {
-            //Логотип медленно превращаеться в шо..
-            LogoTurnsDismiss(color: .bucks, isOn: $isOn) {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
-                    isOn = false
-                }
-            }
-            .zIndex(1)
-            
-            ScrollView {
-                ZStack(alignment: .top) {
-                    TextAboutPlayer(isOn: $isOn)
-                    
-                    CardView(isOn: $isOn)
-                        .onTapGesture {
-                            withAnimation(.easeInOut) {
-                                isOn.toggle()
-                            }
-                        }
-                }
+        ScrollView {
+            ForEach(players) { item in
+                VisitingCard(player: item)
             }
         }
     }
