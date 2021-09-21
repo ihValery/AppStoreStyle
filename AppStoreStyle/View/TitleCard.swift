@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct TitleCard: View {
+    var player: Player
     @Binding var isOn: Bool
     var offset: CGFloat
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Giannis")
+                Text(player.firstName)
                     .font(.title.bold())
-                    .foregroundColor(isOn ? .bucksLogo : .white)
-                Text("Antetokounmpo")
+                    .foregroundColor(.white)
+                Text(player.lastName)
                     .font(.title.bold())
-                    .foregroundColor(isOn ? .bucksLogo : .white)
+                    .foregroundColor(.white)
 //                
 //                Text("Смещение \(Int(offset))")
 //                    .foregroundColor(.white.opacity(0.2))
@@ -35,6 +36,8 @@ struct TitleCard: View {
 
 struct TitleCard_Previews: PreviewProvider {
     static var previews: some View {
-        TitleCard(isOn: .constant(true), offset: 10)
+        let player = players[0]
+        TitleCard(player: player, isOn: .constant(true), offset: 10)
+            .previewDevice("iPhone 12")
     }
 }
