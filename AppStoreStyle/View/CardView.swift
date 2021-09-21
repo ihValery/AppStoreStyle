@@ -52,37 +52,15 @@ struct CardView: View {
                 
                 
                 //Логотип медленно превращаеться в шо..
-//                LogoTurnsDismiss(color: player.colorTeam, isOn: $isOn) {
-//                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
-//                        isOn = false
-//                    }
-//                }
-                VStack {
-                    HStack {
-                        Spacer()
-                        
-                        Button(action: {}, label: {
-                            Image(systemName: "xmark")
-                                .font(.title3.bold())
-                                .foregroundColor(offset > -screen.positionDismiss ? player.colorTeam : .white)
-                                .frame(width: 36, height: 36)
-                                .background(offset > -screen.positionDismiss ? Color.white.opacity(0.5) : .black.opacity(0.7))
-                                .clipShape(Circle())
-                                .rotationEffect(.degrees(isOn ? 0 : -360))
-                                .scaleEffect(isOn ? 1 : 0)
-                        })
+                LogoTurnsDismiss(color: player.colorTeam, offset: offset, isOn: $isOn) {
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0.1).speed(2)) {
+                        isOn = false
                     }
-                    .padding(.top, screen.withBangs ? 57 : 30)
-                    .padding(.trailing, screen.withBangs ? 30 : 14)
-                    
-                    Spacer()
                 }
-                .offset(y: scrollUp ? -offset : 0)
-                .offset(y: !scrollUp ? -offset : 0)
-                .zIndex(1)
             }
             .frame(maxWidth: .infinity)
         }
+        .statusBar(hidden: isOn)
     }
     
     ///Закругляем углы в зависимости от экрана и переменной isOn

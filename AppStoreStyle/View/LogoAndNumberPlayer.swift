@@ -42,7 +42,7 @@ struct LogoAndNumberPlayer: View {
 struct LogoAndNumberPlayer_Previews: PreviewProvider {
     static var previews: some View {
         let player = players[1]
-        LogoAndNumberPlayer(player: player, isOn: .constant(false))
+        LogoAndNumberPlayer(player: player, isOn: .constant(true))
             .previewDevice("iPhone 12")
     }
 }
