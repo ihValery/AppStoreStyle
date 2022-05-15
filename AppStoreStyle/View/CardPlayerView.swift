@@ -37,9 +37,7 @@ struct CardPlayerView: View {
                 .background(player.colorTeam)
                 .mask(maskRectangle)
                 .overlay(fullNamePlayer(), alignment: .bottomLeading)
-//                .overlay(strokeCard)
                 .padding(.horizontal, 20)
-//                .padding(.horizontal, isFullScreen ? 0 : 20)
             
             if isFullScreen {
                 Spacer()
@@ -58,26 +56,16 @@ struct CardPlayerView: View {
         Image(player.teamLogo)
             .resizable()
             .scaledToFit()
-            .frame(width: isFullScreen ? InternalConstant.heightBigCard + 100 : InternalConstant.heightSmalCard / 2,
-                   height: isFullScreen ? InternalConstant.heightBigCard + 100 : InternalConstant.heightSmalCard / 2)
+            .frame(width: sizeLogoImage, height: sizeLogoImage)
             .padding(.leading)
             .padding(.bottom, isFullScreen ? 0 : 60)
             .offset(x: isFullScreen ? -(InternalConstant.heightBigCard + 100) / 2 - 16 : 0)
             .opacity(isFullScreen ? 0.5 : 1)
     }
     
-//    private var gradient: [Color] {
-//        var colorsTeam = Array(repeating: player.colorTeam, count: 17)
-//        colorsTeam.append(.white)
-//
-//        return colorsTeam
-//    }
-//
-//    private var strokeCard: some View {
-//        RoundedRectangle(cornerRadius: 20, style: .continuous)
-//            .stroke(LinearGradient(colors: gradient, startPoint: .top, endPoint: .bottom),
-//                    lineWidth: 1)
-//    }
+    private var sizeLogoImage: CGFloat {
+        isFullScreen ? InternalConstant.heightBigCard + 100 : InternalConstant.heightSmalCard / 2
+    }
     
     private var playerNumber: some View {
         Text(player.number.description)
@@ -118,6 +106,8 @@ struct CardPlayerView: View {
                         .matchedGeometryEffect(id: "lastName", in: namespace)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 30)
+                .frame(maxHeight: .infinity, alignment: .top)
             } else {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(player.firstName)
@@ -125,13 +115,14 @@ struct CardPlayerView: View {
                     Text(player.lastName)
                         .matchedGeometryEffect(id: "lastName", in: namespace)
                 }
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
         .lineLimit(1)
         .font(.system(size: InternalConstant.heightSmalCard / 8, weight: .bold, design: .default))
         .foregroundColor(.white)
-        .shadow(color: .black, radius: 1, x: 0, y: 0)
-//        .offset(y: isFullScreen ? 60 : 0)
+        .shadow(color: .black, radius: 0.1, x: 0, y: 0)
+        .shadow(color: player.colorTeam, radius: 10, x: 0, y: 0)
         .padding()
     }
 }
