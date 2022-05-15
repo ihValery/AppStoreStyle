@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  OldVersionContentView.swift
 //  AppStoreStyle
 //
 //  Created by Валерий Игнатьев on 12.08.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct OldVersionContentView: View {
 //    var player: Player
 //    var screen = ScreenBounds()
 //    @State private var isOn = false
@@ -21,9 +21,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct OldVersionContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        OldVersionContentView()
             .previewDevice("iPhone 12")
     }
 }
