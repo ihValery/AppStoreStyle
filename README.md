@@ -1,6 +1,6 @@
 # AppStoreStyle
     
-<img src="https://github.com/ihValery/AppStoreStyle/blob/main/Images/playersBasketball.gif?raw=true"></a>
+<img src="https://github.com/ihValery/AppStoreStyle/blob/main/Images/+ScrollViewReader.gif?raw=true"></a>
 - Challenger:
     - Повторить скрол из AppStore
     - реализовать максимально точно данный дизайн
