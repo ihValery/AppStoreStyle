@@ -48,15 +48,15 @@ struct CardPlayerView: View {
             }
         }
         
-        .onTapGesture {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
-                if selected == player {
-                    selected = nil
-                } else {
-                    selected = player
-                }
-            }
-        }
+//        .onTapGesture {
+//            withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
+//                if selected == player {
+//                    selected = nil
+//                } else {
+//                    selected = player
+//                }
+//            }
+//        }
     }
     
     private var logoImage: some View {
