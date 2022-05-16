@@ -36,7 +36,7 @@ struct PlayersView: View {
     //MARK: Private Methods
     
     private func selectingPlayerSwitchingToIt(_ player: PlayerModel, _ proxy: ScrollViewProxy) {
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
             if selected == player {
                 selected = nil
             } else {
