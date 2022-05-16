@@ -1,5 +1,6 @@
 # AppStoreStyle
     
+<img src="https://github.com/ihValery/AppStoreStyle/blob/main/playersCard.gif?raw=true"></a>
 - Challenger:
     - Повторить скрол из AppStore
     - реализовать максимально точно данный дизайн
