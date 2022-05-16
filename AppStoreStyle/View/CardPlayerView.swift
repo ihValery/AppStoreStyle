@@ -14,7 +14,7 @@ struct CardPlayerView: View {
     //MARK: Internal Constant
     
     struct InternalConstant {
-        static let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2
+        static let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2 - 100
         static let heightSmalCard: CGFloat = UIScreen.main.bounds.width / 2
     }
     
@@ -48,15 +48,15 @@ struct CardPlayerView: View {
             }
         }
         
-        .onTapGesture {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
-                if selected == player {
-                    selected = nil
-                } else {
-                    selected = player
-                }
-            }
-        }
+//        .onTapGesture {
+//            withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
+//                if selected == player {
+//                    selected = nil
+//                } else {
+//                    selected = player
+//                }
+//            }
+//        }
     }
     
     private var logoImage: some View {
