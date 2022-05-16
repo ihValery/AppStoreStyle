@@ -9,7 +9,7 @@ import SwiftUI
 
 //MARK: - PlayerModel
 
-struct PlayerModel: Identifiable {
+struct PlayerModel: Identifiable, Equatable {
     
     //MARK: Properties
     

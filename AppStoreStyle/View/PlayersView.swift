@@ -14,12 +14,14 @@ struct PlayersView: View {
     //MARK: Properties
     
     @ObservedObject private var playerViewModel = PlayerVM()
+    
+    @State private var selected: PlayerModel? = nil
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(spacing: 10) {
                 ForEach(playerViewModel.players) { player in
-                    CardPlayerView(player)
+                    CardPlayerView(player, $selected)
                 }
             }
         }

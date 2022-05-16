@@ -22,9 +22,13 @@ struct CardPlayerView: View {
     
     @Namespace private var namespace
     
-    @State private var isFullScreen: Bool = false
+    @Binding var selected: PlayerModel?
     
     private let player: PlayerModel
+    
+    private var isFullScreen: Bool {
+        selected == player
+    }
     
     var body: some View {
         VStack {
@@ -43,11 +47,14 @@ struct CardPlayerView: View {
                 Spacer()
             }
         }
-        .ignoresSafeArea()
         
         .onTapGesture {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.9)) {
-                isFullScreen.toggle()
+                if selected == player {
+                    selected = nil
+                } else {
+                    selected = player
+                }
             }
         }
     }
@@ -70,7 +77,7 @@ struct CardPlayerView: View {
     private var playerNumber: some View {
         Text(player.number.description)
             .font(.system(size: InternalConstant.heightBigCard / 5, weight: .bold, design: .default))
-            .offset(x: isFullScreen ? 0 : 300, y: isFullScreen ? -50 : -150)
+            .offset(x: isFullScreen ? 0 : 300/*, y: isFullScreen ? -50 : -150*/)
             .padding(.trailing)
             .foregroundColor(.white).opacity(0.4)
     }
@@ -90,8 +97,9 @@ struct CardPlayerView: View {
     
     //MARK: Initializer
     
-    init(_ player: PlayerModel) {
+    init(_ player: PlayerModel,_ selected: Binding<PlayerModel?>) {
         self.player = player
+        self._selected = selected
     }
     
     //MARK: Private Methods
@@ -105,8 +113,8 @@ struct CardPlayerView: View {
                     Text(player.lastName)
                         .matchedGeometryEffect(id: "lastName", in: namespace)
                 }
+                .padding(.top)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 30)
                 .frame(maxHeight: .infinity, alignment: .top)
             } else {
                 VStack(alignment: .leading, spacing: 0) {
@@ -133,6 +141,6 @@ struct OneCardView_Previews: PreviewProvider {
     static let player = PlayerVM().players[2]
     
     static var previews: some View {
-        CardPlayerView(player)
+        CardPlayerView(player, .constant(player))
     }
 }
