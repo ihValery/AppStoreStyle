@@ -47,15 +47,14 @@ struct NSContentView: View {
                 NSCardSmall(playerViewModel.players[0], namespace6)
                 NSCardSmall(playerViewModel.players[3], namespace7)
             }
-            .blur(radius: isShow ? 10 : 0)
             
             if isShow {
                 NSCardBig(playerViewModel.players[1], namespace, $isShow)
-//                    .zIndex(1)
-//                    .transition(
-//                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.2)),
-//                                    removal: .opacity.animation(.easeOut.delay(0.1)))
-//                    )
+                    .zIndex(1)
+                    .transition(
+                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.1)),
+                                    removal: .opacity.animation(.linear(duration: 0.1).delay(0.1)))
+                    )
 //                    .opacity(0.5)
             }
         }

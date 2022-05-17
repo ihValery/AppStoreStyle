@@ -27,7 +27,7 @@ struct CardPlayerView: View {
     private let player: PlayerModel
     
     private var isFullScreen: Bool {
-        selected != player
+        selected == player
     }
     
     var body: some View {
