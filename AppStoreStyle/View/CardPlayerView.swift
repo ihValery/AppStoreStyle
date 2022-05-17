@@ -14,7 +14,7 @@ struct CardPlayerView: View {
     //MARK: Internal Constant
     
     struct InternalConstant {
-        static let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2 - 100
+        static let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2
         static let heightSmalCard: CGFloat = UIScreen.main.bounds.width / 2
     }
     
@@ -27,7 +27,7 @@ struct CardPlayerView: View {
     private let player: PlayerModel
     
     private var isFullScreen: Bool {
-        selected == player
+        selected != player
     }
     
     var body: some View {
@@ -77,7 +77,7 @@ struct CardPlayerView: View {
     private var playerNumber: some View {
         Text(player.number.description)
             .font(.system(size: InternalConstant.heightBigCard / 5, weight: .bold, design: .default))
-            .offset(x: isFullScreen ? 0 : 300/*, y: isFullScreen ? -50 : -150*/)
+            .offset(x: isFullScreen ? 0 : 300)
             .padding(.trailing)
             .foregroundColor(.white).opacity(0.4)
     }

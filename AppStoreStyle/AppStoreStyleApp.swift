@@ -12,7 +12,8 @@ struct AppStoreStyleApp: App {
     var body: some Scene {
         WindowGroup {
 //            HomeView()
-            PlayersView()
+//            PlayersView()
+            NSContentView()
         }
     }
 }
