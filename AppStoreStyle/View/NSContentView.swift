@@ -51,10 +51,10 @@ struct NSContentView: View {
             if isShow {
                 NSCardBig(playerViewModel.players[1], namespace, $isShow)
                     .zIndex(1)
-                    .transition(
-                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.1)),
-                                    removal: .opacity.animation(.linear(duration: 0.1).delay(0.1)))
-                    )
+//                    .transition(
+//                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.2)),
+//                                    removal: .opacity.animation(.linear(duration: 0.1).speed(2)))
+//                    )
 //                    .opacity(0.5)
             }
         }

@@ -21,6 +21,8 @@ struct CloseButton: View {
     
     private let color: Color
     
+    private let isBlack: Bool
+    
     //MARK: Properties
     var body: some View {
         Button {
@@ -31,15 +33,20 @@ struct CloseButton: View {
                 .foregroundColor(color)
                 .frame(width: InternalConstant.sizeLogo.width,
                        height: InternalConstant.sizeLogo.height)
-                .background(Color.white.opacity(0.4))
+                .background(backgroundColor.opacity(0.4))
                 .mask(Circle())
         }
     }
     
+    private var backgroundColor: Color {
+        isBlack ? .black : .white
+    }
+    
     //MARK: Initializer
     
-    init(_ color: Color, action: @escaping () -> Void) {
+    init(_ color: Color,_ isBlack: Bool, action: @escaping () -> Void) {
         self.color = color
+        self.isBlack = isBlack
         self.action = action
     }
 }
@@ -48,8 +55,8 @@ struct CloseButton: View {
 struct CloseButton_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CloseButton(.red) { }
-            CloseButton(.green) { }
+            CloseButton(.red, true) { }
+            CloseButton(.red, false) { }
                 .preferredColorScheme(.dark)
         }
         .previewLayout(.fixed(width: 100, height: 100))

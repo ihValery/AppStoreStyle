@@ -18,6 +18,7 @@
 		804C4C022833DD84005BBCF4 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C012833DD84005BBCF4 /* CloseButton.swift */; };
 		804C4C042833E08F005BBCF4 /* NSCardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C032833E08F005BBCF4 /* NSCardSmall.swift */; };
 		804C4C062833E344005BBCF4 /* NSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C052833E344005BBCF4 /* NSContentView.swift */; };
+		804C4C0828342D6C005BBCF4 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */; };
 		805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C3EA926E14010001FD18C /* CustomCorners.swift */; };
 		809DC60726C635F400D89E64 /* TextAboutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DC60626C635F400D89E64 /* TextAboutPlayer.swift */; };
 		80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */; };
@@ -46,6 +47,7 @@
 		804C4C012833DD84005BBCF4 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		804C4C032833E08F005BBCF4 /* NSCardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCardSmall.swift; sourceTree = "<group>"; };
 		804C4C052833E344005BBCF4 /* NSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSContentView.swift; sourceTree = "<group>"; };
+		804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
 		805C3EA926E14010001FD18C /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		809DC60626C635F400D89E64 /* TextAboutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAboutPlayer.swift; sourceTree = "<group>"; };
 		80A2BBF826C4C37E000A7606 /* AppStoreStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 			children = (
 				805C3EA926E14010001FD18C /* CustomCorners.swift */,
 				804C4BFF2833DC05005BBCF4 /* ContentText.swift */,
+				804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				8041595428319625008CC0BE /* PlayersView.swift in Sources */,
 				804C4C002833DC05005BBCF4 /* ContentText.swift in Sources */,
 				80A5E49F26E2F7F4003F3A12 /* VisitingCard.swift in Sources */,
+				804C4C0828342D6C005BBCF4 /* ScrollPreferenceKey.swift in Sources */,
 				8041595628319630008CC0BE /* CardPlayerView.swift in Sources */,
 				80A2BC1526C57F53000A7606 /* LogoTurnsDismiss.swift in Sources */,
 				8041595828319638008CC0BE /* PlayerVM.swift in Sources */,
@@ -329,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -384,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +408,7 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppStoreStyle/System32/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,7 +430,7 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppStoreStyle/System32/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

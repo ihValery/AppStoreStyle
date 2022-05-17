@@ -96,7 +96,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         let player = players[1]
-        CardView(player: player, isOn: .constant(false))
+        CardView(player: player, isOn: .constant(true))
             .previewDevice("iPhone 12")
     }
 }
