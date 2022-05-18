@@ -40,7 +40,7 @@ struct NSHomeView: View {
                 
                 NSCardSmall(playerViewModel.players[1], namespace)
                     .onTapGesture {
-                        withAnimation(.spring(response: 0.7, dampingFraction: 0.7)) { isShow.toggle() }
+                        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) { isShow.toggle() }
                     }
                 
                 NSCardSmall(playerViewModel.players[4], namespace5)
@@ -51,10 +51,10 @@ struct NSHomeView: View {
             if isShow {
                 NSCardBig(playerViewModel.players[1], namespace, $isShow)
                     .zIndex(1)
-//                    .transition(
-//                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.2)),
-//                                    removal: .opacity.animation(.linear(duration: 0.1).speed(2)))
-//                    )
+                    .transition(
+                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.2)),
+                                    removal: .opacity.animation(.linear(duration: 0.1).speed(2)))
+                    )
 //                    .opacity(0.5)
             }
         }
