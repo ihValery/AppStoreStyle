@@ -1,5 +1,5 @@
 //
-//  NSContentView.swift
+//  NSHomeView.swift
 //  AppStoreStyle
 //
 //  Created by Валерий Игнатьев on 17.05.22.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-//MARK: - NanespaceContentView
+//MARK: - NanespaceHomeView
 
-struct NSContentView: View {
+struct NSHomeView: View {
     
     //MARK: Properties
     
-    @ObservedObject private var playerViewModel = PlayerVM()
+    @ObservedObject private var playerViewModel = NSPlayerVM()
     
     @Namespace private var namespace
     
@@ -65,6 +65,6 @@ struct NSContentView: View {
 
 struct NSContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NSContentView()
+        NSHomeView()
     }
 }

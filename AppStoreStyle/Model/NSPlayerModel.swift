@@ -1,5 +1,5 @@
 //
-//  PlayerModel.swift
+//  NSPlayerModel.swift
 //  BearNameSpace
 //
 //  Created by Валерий Игнатьев on 15.05.22.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-//MARK: - PlayerModel
+//MARK: - NamespacePlayerModel
 
-struct PlayerModel: Identifiable, Equatable {
+struct NSPlayerModel: Identifiable, Equatable {
     
     //MARK: Properties
     

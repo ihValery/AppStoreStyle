@@ -13,7 +13,7 @@ struct AppStoreStyleApp: App {
         WindowGroup {
 //            HomeView()
 //            PlayersView()
-            NSContentView()
+            NSHomeView()
         }
     }
 }

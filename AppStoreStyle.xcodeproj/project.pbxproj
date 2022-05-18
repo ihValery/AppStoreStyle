@@ -10,15 +10,15 @@
 		80415952283195D4008CC0BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80415951283195D4008CC0BE /* HomeView.swift */; };
 		8041595428319625008CC0BE /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041595328319625008CC0BE /* PlayersView.swift */; };
 		8041595628319630008CC0BE /* CardPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804159552831962F008CC0BE /* CardPlayerView.swift */; };
-		8041595828319638008CC0BE /* PlayerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041595728319638008CC0BE /* PlayerVM.swift */; };
-		8041595A2831963F008CC0BE /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804159592831963F008CC0BE /* PlayerModel.swift */; };
+		8041595828319638008CC0BE /* NSPlayerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041595728319638008CC0BE /* NSPlayerVM.swift */; };
+		8041595A2831963F008CC0BE /* NSPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804159592831963F008CC0BE /* NSPlayerModel.swift */; };
 		804C4BFC2833D6CF005BBCF4 /* NSCardBig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4BFB2833D6CF005BBCF4 /* NSCardBig.swift */; };
 		804C4BFE2833DAFC005BBCF4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4BFD2833DAFC005BBCF4 /* View.swift */; };
 		804C4C002833DC05005BBCF4 /* ContentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4BFF2833DC05005BBCF4 /* ContentText.swift */; };
 		804C4C022833DD84005BBCF4 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C012833DD84005BBCF4 /* CloseButton.swift */; };
 		804C4C042833E08F005BBCF4 /* NSCardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C032833E08F005BBCF4 /* NSCardSmall.swift */; };
-		804C4C062833E344005BBCF4 /* NSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C052833E344005BBCF4 /* NSContentView.swift */; };
-		804C4C0828342D6C005BBCF4 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */; };
+		804C4C062833E344005BBCF4 /* NSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C052833E344005BBCF4 /* NSHomeView.swift */; };
+		804C4C0A283506B2005BBCF4 /* NSDefaultScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C09283506B2005BBCF4 /* NSDefaultScrollView.swift */; };
 		805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C3EA926E14010001FD18C /* CustomCorners.swift */; };
 		809DC60726C635F400D89E64 /* TextAboutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DC60626C635F400D89E64 /* TextAboutPlayer.swift */; };
 		80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */; };
@@ -39,15 +39,15 @@
 		80415951283195D4008CC0BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8041595328319625008CC0BE /* PlayersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		804159552831962F008CC0BE /* CardPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPlayerView.swift; sourceTree = "<group>"; };
-		8041595728319638008CC0BE /* PlayerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVM.swift; sourceTree = "<group>"; };
-		804159592831963F008CC0BE /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		8041595728319638008CC0BE /* NSPlayerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPlayerVM.swift; sourceTree = "<group>"; };
+		804159592831963F008CC0BE /* NSPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPlayerModel.swift; sourceTree = "<group>"; };
 		804C4BFB2833D6CF005BBCF4 /* NSCardBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCardBig.swift; sourceTree = "<group>"; };
 		804C4BFD2833DAFC005BBCF4 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		804C4BFF2833DC05005BBCF4 /* ContentText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentText.swift; sourceTree = "<group>"; };
 		804C4C012833DD84005BBCF4 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		804C4C032833E08F005BBCF4 /* NSCardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCardSmall.swift; sourceTree = "<group>"; };
-		804C4C052833E344005BBCF4 /* NSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSContentView.swift; sourceTree = "<group>"; };
-		804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		804C4C052833E344005BBCF4 /* NSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSHomeView.swift; sourceTree = "<group>"; };
+		804C4C09283506B2005BBCF4 /* NSDefaultScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDefaultScrollView.swift; sourceTree = "<group>"; };
 		805C3EA926E14010001FD18C /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		809DC60626C635F400D89E64 /* TextAboutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAboutPlayer.swift; sourceTree = "<group>"; };
 		80A2BBF826C4C37E000A7606 /* AppStoreStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,6 @@
 			children = (
 				805C3EA926E14010001FD18C /* CustomCorners.swift */,
 				804C4BFF2833DC05005BBCF4 /* ContentText.swift */,
-				804C4C0728342D6C005BBCF4 /* ScrollPreferenceKey.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -139,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				80A2BC1226C4C93F000A7606 /* ScreenBounds.swift */,
-				8041595728319638008CC0BE /* PlayerVM.swift */,
+				8041595728319638008CC0BE /* NSPlayerVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,7 +148,8 @@
 			children = (
 				804C4BFB2833D6CF005BBCF4 /* NSCardBig.swift */,
 				804C4C032833E08F005BBCF4 /* NSCardSmall.swift */,
-				804C4C052833E344005BBCF4 /* NSContentView.swift */,
+				804C4C052833E344005BBCF4 /* NSHomeView.swift */,
+				804C4C09283506B2005BBCF4 /* NSDefaultScrollView.swift */,
 				80A2BBFD26C4C37E000A7606 /* OldVersionContentView.swift */,
 				80415951283195D4008CC0BE /* HomeView.swift */,
 				80A5E49E26E2F7F4003F3A12 /* VisitingCard.swift */,
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				80A5E49A26E2F2D3003F3A12 /* Player.swift */,
-				804159592831963F008CC0BE /* PlayerModel.swift */,
+				804159592831963F008CC0BE /* NSPlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				804C4BFC2833D6CF005BBCF4 /* NSCardBig.swift in Sources */,
 				80A5E49B26E2F2D3003F3A12 /* Player.swift in Sources */,
 				80A2BC1326C4C93F000A7606 /* ScreenBounds.swift in Sources */,
-				804C4C062833E344005BBCF4 /* NSContentView.swift in Sources */,
+				804C4C062833E344005BBCF4 /* NSHomeView.swift in Sources */,
 				80415952283195D4008CC0BE /* HomeView.swift in Sources */,
 				80A2BBFE26C4C37E000A7606 /* OldVersionContentView.swift in Sources */,
 				80A5E49626E283F2003F3A12 /* TitleCard.swift in Sources */,
@@ -263,15 +263,15 @@
 				8041595428319625008CC0BE /* PlayersView.swift in Sources */,
 				804C4C002833DC05005BBCF4 /* ContentText.swift in Sources */,
 				80A5E49F26E2F7F4003F3A12 /* VisitingCard.swift in Sources */,
-				804C4C0828342D6C005BBCF4 /* ScrollPreferenceKey.swift in Sources */,
 				8041595628319630008CC0BE /* CardPlayerView.swift in Sources */,
 				80A2BC1526C57F53000A7606 /* LogoTurnsDismiss.swift in Sources */,
-				8041595828319638008CC0BE /* PlayerVM.swift in Sources */,
+				8041595828319638008CC0BE /* NSPlayerVM.swift in Sources */,
 				80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */,
-				8041595A2831963F008CC0BE /* PlayerModel.swift in Sources */,
+				8041595A2831963F008CC0BE /* NSPlayerModel.swift in Sources */,
 				80A2BC1726C581B1000A7606 /* CardView.swift in Sources */,
 				804C4C042833E08F005BBCF4 /* NSCardSmall.swift in Sources */,
 				80A5E49826E2BE88003F3A12 /* LogoAndNumberPlayer.swift in Sources */,
+				804C4C0A283506B2005BBCF4 /* NSDefaultScrollView.swift in Sources */,
 				80A5E49426E2816C003F3A12 /* Color.swift in Sources */,
 				804C4C022833DD84005BBCF4 /* CloseButton.swift in Sources */,
 				805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */,

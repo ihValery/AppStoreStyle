@@ -24,7 +24,7 @@ struct HomeView: View {
                 }
                 
                 NavigationLink {
-                    NSContentView()
+                    NSHomeView()
                 } label: {
                     Text("Namespace 2view")
                 }

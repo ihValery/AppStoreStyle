@@ -13,9 +13,9 @@ struct PlayersView: View {
     
     //MARK: Properties
     
-    @ObservedObject private var playerViewModel = PlayerVM()
+    @ObservedObject private var playerViewModel = NSPlayerVM()
     
-    @State private var selected: PlayerModel? = nil
+    @State private var selected: NSPlayerModel? = nil
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -35,7 +35,7 @@ struct PlayersView: View {
     
     //MARK: Private Methods
     
-    private func selectingPlayerSwitchingToIt(_ player: PlayerModel, _ proxy: ScrollViewProxy) {
+    private func selectingPlayerSwitchingToIt(_ player: NSPlayerModel, _ proxy: ScrollViewProxy) {
         withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
             if selected == player {
                 selected = nil

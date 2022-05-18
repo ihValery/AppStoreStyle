@@ -22,9 +22,9 @@ struct CardPlayerView: View {
     
     @Namespace private var namespace
     
-    @Binding var selected: PlayerModel?
+    @Binding var selected: NSPlayerModel?
     
-    private let player: PlayerModel
+    private let player: NSPlayerModel
     
     private var isFullScreen: Bool {
         selected == player
@@ -97,7 +97,7 @@ struct CardPlayerView: View {
     
     //MARK: Initializer
     
-    init(_ player: PlayerModel,_ selected: Binding<PlayerModel?>) {
+    init(_ player: NSPlayerModel,_ selected: Binding<NSPlayerModel?>) {
         self.player = player
         self._selected = selected
     }
@@ -138,7 +138,7 @@ struct CardPlayerView: View {
 //MARK: - PreviewProvider
 
 struct OneCardView_Previews: PreviewProvider {
-    static let player = PlayerVM().players[2]
+    static let player = NSPlayerVM().players[2]
     
     static var previews: some View {
         CardPlayerView(player, .constant(player))

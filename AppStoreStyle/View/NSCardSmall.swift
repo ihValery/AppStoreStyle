@@ -20,7 +20,7 @@ struct NSCardSmall: View {
     
     //MARK: Properties
     
-    private let player: PlayerModel
+    private let player: NSPlayerModel
     
     private var namespace: Namespace.ID
     
@@ -77,7 +77,7 @@ struct NSCardSmall: View {
     
     //MARK: Initializer
     
-    init(_ player: PlayerModel,_ namespace: Namespace.ID) {
+    init(_ player: NSPlayerModel,_ namespace: Namespace.ID) {
         self.player = player
         self.namespace = namespace
     }
@@ -104,7 +104,7 @@ struct NSCardSmall: View {
 //MARK: - PreviewProvider
 
 struct NSCardSmall_Previews: PreviewProvider {
-    static let player = PlayerVM().players[2]
+    static let player = NSPlayerVM().players[2]
     @Namespace static var namespace
     
     static var previews: some View {
