@@ -17,10 +17,6 @@ struct NSCardBig: View {
     
     @State private var scrollProxy: CGFloat = 0
     
-    private let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2
-    
-    private let heightSmalCard: CGFloat = UIScreen.main.bounds.width / 2
-    
     private var namespace: Namespace.ID
     
     private let player: NSPlayerModel
@@ -37,15 +33,11 @@ struct NSCardBig: View {
             
             closeButton
         }
-        
         .onAppear {
-            withAnimation(.linear.delay(0.1)) { animationSplit[0] = true }
-            withAnimation(.easeInOut.delay(0.4)) { animationSplit[1] = true }
+            appearAnimation()
         }
-        
         .onChange(of: isShow) { _ in
-            animationSplit[0] = false
-            animationSplit[1] = false
+            disappearAnimation()
         }
     }
     
@@ -55,7 +47,7 @@ struct NSCardBig: View {
         Image(player.avatar)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: "playerImage", in: namespace)
+            .matchedGeometryEffect(id: NSpaceID.avatar, in: namespace)
             .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 0)
             .frame(height: springHeaderCard, alignment: .bottom)
             .background(logoTeam, alignment: .leading)
@@ -70,55 +62,54 @@ struct NSCardBig: View {
     private var fullNamePlayer: some View {
         HStack(spacing: 10) {
             Text(player.firstName)
-                .matchedGeometryEffect(id: "firstName", in: namespace)
+                .matchedGeometryEffect(id: NSpaceID.firstName, in: namespace)
             Text(player.lastName)
-                .matchedGeometryEffect(id: "lastName", in: namespace)
+                .matchedGeometryEffect(id: NSpaceID.lastName, in: namespace)
         }
-        .frame(height: 40, alignment: .center)
+        .frame(height: NSConstant.sizeCloseButton)
         .lineLimit(1)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .font(.system(size: heightSmalCard / 8, weight: .bold, design: .default))
+        .font(.defaultFontName())
         .foregroundColor(.white)
-        .shadow(color: .black, radius: 0.1, x: 0, y: 0)
-        .shadow(color: player.colorTeam, radius: 10, x: 0, y: 0)
+        .defaultShadowName(player.colorTeam)
         .padding(.horizontal)
         .padding(.top, getSafeArea().top)
     }
     
     private var numberPlayer: some View {
         Text(player.number.description)
-            .font(.system(size: heightBigCard / 5,
-                          weight: .bold, design: .default))
-            .matchedGeometryEffect(id: "playerNumber", in: namespace)
+            .font(.defaultFontNumber())
+            .matchedGeometryEffect(id: NSpaceID.number, in: namespace)
             .padding(.trailing)
             .foregroundColor(.white)
             .scaleEffect(scaleEffectSpringHeader)
             .offset(y: whenScrollingUpParallax)
-            .opacity(0.4)
+            .opacity(NSConstant.defaultOpacity)
     }
     
     private var logoTeam: some View {
-        let sizeLogo: CGFloat = heightBigCard + 100
+        let sizeLogo: CGFloat = NSConstant.heightBigCard + 100
+        let whenScrollingDownOffset = isScrollDown ? scrollProxy / 2.5 : 0
         
         return Image(player.teamLogo)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: "logoImage", in: namespace)
+            .matchedGeometryEffect(id: NSpaceID.logo, in: namespace)
             .frame(width: sizeLogo, height: sizeLogo)
-            .offset(x: (sizeLogo / -2) + (isScrollDown ? scrollProxy / 2.5 : 0))
+            .offset(x: (sizeLogo / -2) + whenScrollingDownOffset)
             .offset(y: whenScrollingUpParallax)
             .scaleEffect(scaleEffectSpringHeader)
-            .opacity(0.4)
+            .opacity(NSConstant.defaultOpacity)
     }
     
     private var backgroundColorTeam: some View {
         player.colorTeam
-            .matchedGeometryEffect(id: "colorTeam", in: namespace)
+            .matchedGeometryEffect(id: NSpaceID.color, in: namespace)
     }
     
     private var maskRectangle: some View {
-        RoundedRectangle(cornerRadius: 20, style: .continuous)
-            .matchedGeometryEffect(id: "mask", in: namespace)
+        RoundedRectangle(cornerRadius: NSConstant.cornerRadius, style: .continuous)
+            .matchedGeometryEffect(id: NSpaceID.mask, in: namespace)
     }
     
     private var contentTextPlayer: some View {
@@ -146,7 +137,12 @@ struct NSCardBig: View {
     }
     
     private var closeButtonColor: Bool {
-        scrollProxy > -(heightBigCard - getSafeArea().top - 20) ? false : true
+        let positionCloseButton = -(
+            NSConstant.heightBigCard
+            - getSafeArea().top
+            - NSConstant.sizeCloseButton / 2
+        )
+        return scrollProxy > positionCloseButton ? false : true
     }
     
     private var whenScrollingDownStand: CGFloat {
@@ -158,7 +154,7 @@ struct NSCardBig: View {
     }
     
     private var springHeaderCard: CGFloat {
-        isScrollDown ? heightBigCard + scrollProxy : heightBigCard
+        isScrollDown ? NSConstant.heightBigCard + scrollProxy : NSConstant.heightBigCard
     }
     
     private var scaleEffectSpringHeader: CGFloat {
@@ -171,6 +167,23 @@ struct NSCardBig: View {
         self.player = player
         self.namespace = namespace
         self._isShow = isShow
+    }
+    
+    //MARK: Private Methods
+    
+    private func appearAnimation() {
+        withAnimation(.linear.delay(0.1)) {
+            animationSplit[0] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.4)) {
+            animationSplit[1] = true
+        }
+    }
+    
+    private func disappearAnimation() {
+        animationSplit[0] = false
+        animationSplit[1] = false
     }
 }
 

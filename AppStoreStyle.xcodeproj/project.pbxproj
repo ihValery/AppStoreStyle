@@ -19,6 +19,9 @@
 		804C4C042833E08F005BBCF4 /* NSCardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C032833E08F005BBCF4 /* NSCardSmall.swift */; };
 		804C4C062833E344005BBCF4 /* NSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C052833E344005BBCF4 /* NSHomeView.swift */; };
 		804C4C0A283506B2005BBCF4 /* NSDefaultScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C09283506B2005BBCF4 /* NSDefaultScrollView.swift */; };
+		804C4C0C28350C97005BBCF4 /* NSpaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0B28350C97005BBCF4 /* NSpaceID.swift */; };
+		804C4C0E28350F94005BBCF4 /* NSConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0D28350F94005BBCF4 /* NSConstant.swift */; };
+		804C4C1028351179005BBCF4 /* NSViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0F28351179005BBCF4 /* NSViewModifier.swift */; };
 		805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C3EA926E14010001FD18C /* CustomCorners.swift */; };
 		809DC60726C635F400D89E64 /* TextAboutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DC60626C635F400D89E64 /* TextAboutPlayer.swift */; };
 		80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */; };
@@ -48,6 +51,9 @@
 		804C4C032833E08F005BBCF4 /* NSCardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCardSmall.swift; sourceTree = "<group>"; };
 		804C4C052833E344005BBCF4 /* NSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSHomeView.swift; sourceTree = "<group>"; };
 		804C4C09283506B2005BBCF4 /* NSDefaultScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDefaultScrollView.swift; sourceTree = "<group>"; };
+		804C4C0B28350C97005BBCF4 /* NSpaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSpaceID.swift; sourceTree = "<group>"; };
+		804C4C0D28350F94005BBCF4 /* NSConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSConstant.swift; sourceTree = "<group>"; };
+		804C4C0F28351179005BBCF4 /* NSViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewModifier.swift; sourceTree = "<group>"; };
 		805C3EA926E14010001FD18C /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		809DC60626C635F400D89E64 /* TextAboutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAboutPlayer.swift; sourceTree = "<group>"; };
 		80A2BBF826C4C37E000A7606 /* AppStoreStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,7 @@
 			children = (
 				805C3EA926E14010001FD18C /* CustomCorners.swift */,
 				804C4BFF2833DC05005BBCF4 /* ContentText.swift */,
+				804C4C0F28351179005BBCF4 /* NSViewModifier.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 			children = (
 				80A5E49A26E2F2D3003F3A12 /* Player.swift */,
 				804159592831963F008CC0BE /* NSPlayerModel.swift */,
+				804C4C0B28350C97005BBCF4 /* NSpaceID.swift */,
+				804C4C0D28350F94005BBCF4 /* NSConstant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,7 +271,9 @@
 				804C4BFE2833DAFC005BBCF4 /* View.swift in Sources */,
 				8041595428319625008CC0BE /* PlayersView.swift in Sources */,
 				804C4C002833DC05005BBCF4 /* ContentText.swift in Sources */,
+				804C4C0E28350F94005BBCF4 /* NSConstant.swift in Sources */,
 				80A5E49F26E2F7F4003F3A12 /* VisitingCard.swift in Sources */,
+				804C4C1028351179005BBCF4 /* NSViewModifier.swift in Sources */,
 				8041595628319630008CC0BE /* CardPlayerView.swift in Sources */,
 				80A2BC1526C57F53000A7606 /* LogoTurnsDismiss.swift in Sources */,
 				8041595828319638008CC0BE /* NSPlayerVM.swift in Sources */,
@@ -272,6 +283,7 @@
 				804C4C042833E08F005BBCF4 /* NSCardSmall.swift in Sources */,
 				80A5E49826E2BE88003F3A12 /* LogoAndNumberPlayer.swift in Sources */,
 				804C4C0A283506B2005BBCF4 /* NSDefaultScrollView.swift in Sources */,
+				804C4C0C28350C97005BBCF4 /* NSpaceID.swift in Sources */,
 				80A5E49426E2816C003F3A12 /* Color.swift in Sources */,
 				804C4C022833DD84005BBCF4 /* CloseButton.swift in Sources */,
 				805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */,
