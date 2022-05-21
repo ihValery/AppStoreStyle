@@ -13,6 +13,8 @@ struct NSCardBig: View {
     
     //MARK: Properties
     
+    @EnvironmentObject private var nsModel: NSModelVM
+    
     @State private var animationSplit: [Bool] = [false, false]
     
     @State private var scrollProxy: CGFloat = 0
@@ -47,7 +49,7 @@ struct NSCardBig: View {
         Image(player.avatar)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: NSpaceID.avatar, in: namespace)
+            .matchedGeometryEffect(id: "avatar\(player.id)", in: namespace)
             .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 0)
             .frame(height: springHeaderCard, alignment: .bottom)
             .background(logoTeam, alignment: .leading)
@@ -62,9 +64,9 @@ struct NSCardBig: View {
     private var fullNamePlayer: some View {
         HStack(spacing: 10) {
             Text(player.firstName)
-                .matchedGeometryEffect(id: NSpaceID.firstName, in: namespace)
+                .matchedGeometryEffect(id: "firstName\(player.id)", in: namespace)
             Text(player.lastName)
-                .matchedGeometryEffect(id: NSpaceID.lastName, in: namespace)
+                .matchedGeometryEffect(id: "lastName\(player.id)", in: namespace)
         }
         .frame(height: NSConstant.sizeCloseButton)
         .lineLimit(1)
@@ -79,7 +81,7 @@ struct NSCardBig: View {
     private var numberPlayer: some View {
         Text(player.number.description)
             .font(.defaultFontNumber())
-            .matchedGeometryEffect(id: NSpaceID.number, in: namespace)
+            .matchedGeometryEffect(id: "number\(player.id)", in: namespace)
             .padding(.trailing)
             .foregroundColor(.white)
             .scaleEffect(scaleEffectSpringHeader)
@@ -94,7 +96,7 @@ struct NSCardBig: View {
         return Image(player.teamLogo)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: NSpaceID.logo, in: namespace)
+            .matchedGeometryEffect(id: "logo\(player.id)", in: namespace)
             .frame(width: sizeLogo, height: sizeLogo)
             .offset(x: (sizeLogo / -2) + whenScrollingDownOffset)
             .offset(y: whenScrollingUpParallax)
@@ -104,12 +106,12 @@ struct NSCardBig: View {
     
     private var backgroundColorTeam: some View {
         player.colorTeam
-            .matchedGeometryEffect(id: NSpaceID.color, in: namespace)
+            .matchedGeometryEffect(id: "color\(player.id)", in: namespace)
     }
     
     private var maskRectangle: some View {
         RoundedRectangle(cornerRadius: NSConstant.cornerRadius, style: .continuous)
-            .matchedGeometryEffect(id: NSpaceID.mask, in: namespace)
+            .matchedGeometryEffect(id: "mask\(player.id)", in: namespace)
     }
     
     private var contentTextPlayer: some View {
@@ -123,6 +125,9 @@ struct NSCardBig: View {
         CloseButton(player.colorTeam, closeButtonColor) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                 isShow.toggle()
+            }
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.9)) {
+                nsModel.isShowTabBar.toggle()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
@@ -195,5 +200,6 @@ struct CardBig_Previews: PreviewProvider {
     
     static var previews: some View {
         NSCardBig(player, namespace, .constant(true))
+            .environmentObject(NSModelVM())
     }
 }

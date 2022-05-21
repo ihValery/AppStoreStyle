@@ -26,7 +26,6 @@ struct NSCardSmall: View {
             .background(backgroundColorTeam)
             .overlay(fullNamePlayer, alignment: .bottomLeading)
             .mask(maskRectangle)
-            .padding(.horizontal)
     }
     
     //MARK: - Card elements
@@ -34,9 +33,9 @@ struct NSCardSmall: View {
     private var fullNamePlayer: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(player.firstName)
-                .matchedGeometryEffect(id: NSpaceID.firstName, in: namespace)
+                .matchedGeometryEffect(id: "firstName\(player.id)", in: namespace)
             Text(player.lastName)
-                .matchedGeometryEffect(id: NSpaceID.lastName, in: namespace)
+                .matchedGeometryEffect(id: "lastName\(player.id)", in: namespace)
         }
         .font(.defaultFontName())
         .foregroundColor(.white)
@@ -50,7 +49,7 @@ struct NSCardSmall: View {
         return Image(player.teamLogo)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: NSpaceID.logo, in: namespace)
+            .matchedGeometryEffect(id: "logo\(player.id)", in: namespace)
             .frame(width: sizeLogo, height: sizeLogo)
             .padding(.leading)
             .padding(.bottom, 60)
@@ -59,7 +58,7 @@ struct NSCardSmall: View {
     private var numberPlayer: some View {
         Text(player.number.description)
             .font(.defaultFontNumber())
-            .matchedGeometryEffect(id: NSpaceID.number, in: namespace)
+            .matchedGeometryEffect(id: "number\(player.id)", in: namespace)
             .offset(x: 300)
             .foregroundColor(.white)
             .opacity(NSConstant.defaultOpacity)
@@ -67,20 +66,20 @@ struct NSCardSmall: View {
     
     private var maskRectangle: some View {
         RoundedRectangle(cornerRadius: NSConstant.cornerRadius, style: .continuous)
-            .matchedGeometryEffect(id: NSpaceID.mask, in: namespace)
+            .matchedGeometryEffect(id: "mask\(player.id)", in: namespace)
     }
     
     private var avatarPlayer: some View {
         Image(player.avatar)
             .resizable()
             .scaledToFit()
-            .matchedGeometryEffect(id: NSpaceID.avatar, in: namespace)
+            .matchedGeometryEffect(id: "avatar\(player.id)", in: namespace)
             .padding(.top, NSConstant.defaultPadding)
     }
     
     private var backgroundColorTeam: some View {
         player.colorTeam
-            .matchedGeometryEffect(id: NSpaceID.color, in: namespace)
+            .matchedGeometryEffect(id: "color\(player.id)", in: namespace)
     }
     
     //MARK: Initializer
@@ -98,6 +97,21 @@ struct NSCardSmall_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        NSCardSmall(player, namespace)
+        Group {
+            NSCardSmall(player, namespace)
+            
+            NSCardSmallPlug()
+        }
+        .previewLayout(.sizeThatFits)
     }
 }
+
+//MARK: - NSCardSmallPlug
+
+struct NSCardSmallPlug: View {
+    var body: some View {
+        Color.clear
+            .frame(height: NSConstant.heightSmalCard)
+    }
+}
+

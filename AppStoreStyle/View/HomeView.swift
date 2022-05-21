@@ -23,11 +23,11 @@ struct HomeView: View {
                     Text("PlayersView")
                 }
                 
-                NavigationLink {
-                    NSHomeView()
-                } label: {
-                    Text("Namespace 2view")
-                }
+//                NavigationLink {
+//                    NSHomeView()
+//                } label: {
+//                    Text("Namespace 2view")
+//                }
             }
         }
     }
