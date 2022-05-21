@@ -23,6 +23,8 @@
 		804C4C0E28350F94005BBCF4 /* NSConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0D28350F94005BBCF4 /* NSConstant.swift */; };
 		804C4C1028351179005BBCF4 /* NSViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C4C0F28351179005BBCF4 /* NSViewModifier.swift */; };
 		805C3EAA26E14010001FD18C /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C3EA926E14010001FD18C /* CustomCorners.swift */; };
+		8063582A2836C1DE00B2EC65 /* NSModelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806358292836C1DE00B2EC65 /* NSModelVM.swift */; };
+		8063582C2836C67200B2EC65 /* NSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8063582B2836C67200B2EC65 /* NSLoader.swift */; };
 		809DC60726C635F400D89E64 /* TextAboutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DC60626C635F400D89E64 /* TextAboutPlayer.swift */; };
 		80A2BBFC26C4C37E000A7606 /* AppStoreStyleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */; };
 		80A2BBFE26C4C37E000A7606 /* OldVersionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBFD26C4C37E000A7606 /* OldVersionContentView.swift */; };
@@ -36,6 +38,7 @@
 		80A5E49826E2BE88003F3A12 /* LogoAndNumberPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5E49726E2BE88003F3A12 /* LogoAndNumberPlayer.swift */; };
 		80A5E49B26E2F2D3003F3A12 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5E49A26E2F2D3003F3A12 /* Player.swift */; };
 		80A5E49F26E2F7F4003F3A12 /* VisitingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5E49E26E2F7F4003F3A12 /* VisitingCard.swift */; };
+		80FB1ECF283947130036244E /* Stencil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB1ECE283947130036244E /* Stencil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,8 @@
 		804C4C0D28350F94005BBCF4 /* NSConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSConstant.swift; sourceTree = "<group>"; };
 		804C4C0F28351179005BBCF4 /* NSViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewModifier.swift; sourceTree = "<group>"; };
 		805C3EA926E14010001FD18C /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		806358292836C1DE00B2EC65 /* NSModelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSModelVM.swift; sourceTree = "<group>"; };
+		8063582B2836C67200B2EC65 /* NSLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLoader.swift; sourceTree = "<group>"; };
 		809DC60626C635F400D89E64 /* TextAboutPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAboutPlayer.swift; sourceTree = "<group>"; };
 		80A2BBF826C4C37E000A7606 /* AppStoreStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A2BBFB26C4C37E000A7606 /* AppStoreStyleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreStyleApp.swift; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		80A5E49726E2BE88003F3A12 /* LogoAndNumberPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndNumberPlayer.swift; sourceTree = "<group>"; };
 		80A5E49A26E2F2D3003F3A12 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		80A5E49E26E2F7F4003F3A12 /* VisitingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitingCard.swift; sourceTree = "<group>"; };
+		80FB1ECE283947130036244E /* Stencil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stencil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		805C3EA826E13FEC001FD18C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				80FB1ECE283947130036244E /* Stencil.swift */,
 				805C3EA926E14010001FD18C /* CustomCorners.swift */,
 				804C4BFF2833DC05005BBCF4 /* ContentText.swift */,
 				804C4C0F28351179005BBCF4 /* NSViewModifier.swift */,
@@ -146,6 +153,7 @@
 			children = (
 				80A2BC1226C4C93F000A7606 /* ScreenBounds.swift */,
 				8041595728319638008CC0BE /* NSPlayerVM.swift */,
+				806358292836C1DE00B2EC65 /* NSModelVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 		80A2BC1126C4C8C5000A7606 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8063582B2836C67200B2EC65 /* NSLoader.swift */,
 				804C4BFB2833D6CF005BBCF4 /* NSCardBig.swift */,
 				804C4C032833E08F005BBCF4 /* NSCardSmall.swift */,
 				804C4C052833E344005BBCF4 /* NSHomeView.swift */,
@@ -264,12 +273,15 @@
 				804C4BFC2833D6CF005BBCF4 /* NSCardBig.swift in Sources */,
 				80A5E49B26E2F2D3003F3A12 /* Player.swift in Sources */,
 				80A2BC1326C4C93F000A7606 /* ScreenBounds.swift in Sources */,
+				8063582C2836C67200B2EC65 /* NSLoader.swift in Sources */,
+				8063582A2836C1DE00B2EC65 /* NSModelVM.swift in Sources */,
 				804C4C062833E344005BBCF4 /* NSHomeView.swift in Sources */,
 				80415952283195D4008CC0BE /* HomeView.swift in Sources */,
 				80A2BBFE26C4C37E000A7606 /* OldVersionContentView.swift in Sources */,
 				80A5E49626E283F2003F3A12 /* TitleCard.swift in Sources */,
 				804C4BFE2833DAFC005BBCF4 /* View.swift in Sources */,
 				8041595428319625008CC0BE /* PlayersView.swift in Sources */,
+				80FB1ECF283947130036244E /* Stencil.swift in Sources */,
 				804C4C002833DC05005BBCF4 /* ContentText.swift in Sources */,
 				804C4C0E28350F94005BBCF4 /* NSConstant.swift in Sources */,
 				80A5E49F26E2F7F4003F3A12 /* VisitingCard.swift in Sources */,

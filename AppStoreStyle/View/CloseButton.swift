@@ -13,7 +13,6 @@ struct CloseButton: View {
     //MARK: Internal Constant
     
     struct InternalConstant {
-        static let sizeLogo: CGSize = .init(width: 40, height: 40)
         static let xmark = "xmark"
     }
     
@@ -29,10 +28,9 @@ struct CloseButton: View {
             action()
         } label: {
             Image(systemName: InternalConstant.xmark)
-                .font(.title3.bold())
+                .font(.body.bold())
                 .foregroundColor(color)
-                .frame(width: InternalConstant.sizeLogo.width,
-                       height: InternalConstant.sizeLogo.height)
+                .frame(width: NSConstant.sizeCloseButton, height: NSConstant.sizeCloseButton)
                 .background(backgroundColor.opacity(0.4))
                 .mask(Circle())
         }

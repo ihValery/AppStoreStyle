@@ -17,5 +17,5 @@ struct NSConstant {
     static let heightBigCard: CGFloat = UIScreen.main.bounds.height / 2
     static let heightSmalCard: CGFloat = UIScreen.main.bounds.width / 2
     
-    static let sizeCloseButton: CGFloat = 40
+    static let sizeCloseButton: CGFloat = 30
 }

@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct AppStoreStyleApp: App {
+    @StateObject private var nsModel = NSModelVM()
+    @StateObject private var playerViewModel = NSPlayerVM()
+    
     var body: some Scene {
         WindowGroup {
-//            HomeView()
-//            PlayersView()
-            NSHomeView()
+            NSLoader()
+                .environmentObject(nsModel)
+                .environmentObject(playerViewModel)
         }
     }
 }
