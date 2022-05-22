@@ -19,6 +19,8 @@ struct NSCardBig: View {
     
     @State private var scrollProxy: CGFloat = 0
     
+    @State private var isStatusBar: Bool = true
+    
     private var namespace: Namespace.ID
     
     private let player: NSPlayerModel
@@ -26,20 +28,28 @@ struct NSCardBig: View {
     @Binding var isShow: Bool
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             NSDefaultScrollView($scrollProxy) {
                 headerCardPlayer
                 
                 contentTextPlayer
             }
             
+            headerPlayer
+                .overlay(fullNamePlayer, alignment: .top)
+
             closeButton
         }
+        .statusBar(hidden: isStatusBar)
         .onAppear {
             appearAnimation()
         }
         .onChange(of: isShow) { _ in
             disappearAnimation()
+            
+            withAnimation(.linear(duration: 0.1)) {
+                isStatusBar.toggle()
+            }
         }
     }
     
@@ -55,10 +65,19 @@ struct NSCardBig: View {
             .background(logoTeam, alignment: .leading)
             .background(numberPlayer, alignment: .trailing)
             .background(backgroundColorTeam)
-            .overlay(fullNamePlayer)
             .mask(maskRectangle)
             .offset(y: whenScrollingDownStand)
             .zIndex(1)
+    }
+    
+    private var headerPlayer: some View {
+        Color.clear
+            .frame(height: getSafeArea().top + NSConstant.sizeCloseButton)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.bottom)
+            .background(.ultraThinMaterial)
+            .blur(radius: scrollProxy < -50 ? 500 - abs(scrollProxy) * 2 : 1000)
+            .ignoresSafeArea()
     }
     
     private var fullNamePlayer: some View {
@@ -68,14 +87,10 @@ struct NSCardBig: View {
             Text(player.lastName)
                 .matchedGeometryEffect(id: "lastName\(player.id)", in: namespace)
         }
-        .frame(height: NSConstant.sizeCloseButton)
-        .lineLimit(1)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .font(.defaultFontName())
-        .foregroundColor(.white)
-        .defaultShadowName(player.colorTeam)
         .padding(.horizontal)
-        .padding(.top, getSafeArea().top)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.defaultFontName())
+        .foregroundColor(closeButtonColor ? player.colorTeam : .white)
     }
     
     private var numberPlayer: some View {
@@ -200,6 +215,7 @@ struct CardBig_Previews: PreviewProvider {
     
     static var previews: some View {
         NSCardBig(player, namespace, .constant(true))
+            .statusBar(hidden: false)
             .environmentObject(NSModelVM())
     }
 }

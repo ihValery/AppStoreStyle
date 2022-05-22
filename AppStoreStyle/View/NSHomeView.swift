@@ -49,8 +49,8 @@ struct NSHomeView: View {
             if selectID == player.id, isShow {
                 NSCardBig(player, namespace, $isShow)
                     .transition(
-                        .asymmetric(insertion: .opacity.animation(.linear(duration: 0.2)),
-                                    removal: .opacity.animation(.linear(duration: 0.1).speed(2)))
+                        .asymmetric(insertion: .opacity.animation(.easeInOut(duration: 0.1)),
+                                    removal: .opacity.animation(.easeInOut(duration: 0.3)))
                     )
                     .zIndex(1)
             }
