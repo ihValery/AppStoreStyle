@@ -67,7 +67,7 @@ struct NSCardBig: View {
             .background(backgroundColorTeam)
             .mask(maskRectangle)
             .offset(y: whenScrollingDownStand)
-            .zIndex(1)
+//            .zIndex(1)
     }
     
     private var headerPlayer: some View {
