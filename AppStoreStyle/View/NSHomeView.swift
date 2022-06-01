@@ -62,7 +62,7 @@ struct NSHomeView: View {
     private func cardSmall(_ player: NSPlayerModel) -> some View {
         NSCardSmall(player, namespace)
             .onTapGesture {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     selectID = player.id
                     isShow.toggle()
                 }

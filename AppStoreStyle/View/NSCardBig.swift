@@ -76,7 +76,7 @@ struct NSCardBig: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom)
             .background(.ultraThinMaterial)
-            .blur(radius: scrollProxy < -50 ? 500 - abs(scrollProxy) * 2 : 1000)
+            .blur(radius: scrollProxy < -50 ? 660 - abs(scrollProxy) * 2 : 1000)
             .ignoresSafeArea()
     }
     
@@ -90,7 +90,11 @@ struct NSCardBig: View {
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
         .font(.defaultFontName())
-        .foregroundColor(closeButtonColor ? player.colorTeam : .white)
+        .foregroundColor(colorFullNamePlayer)
+    }
+    
+    private var colorFullNamePlayer: Color {
+        closeButtonColor ? player.colorTeam : .white
     }
     
     private var numberPlayer: some View {
