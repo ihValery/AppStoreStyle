@@ -11,5 +11,3 @@
 - параллакс
 - смена цвета
 - появление кнопки, сменя цвета
-
-<img src="https://github.com/ihValery/AppStoreStyle/blob/main/Images/preViewBig.gif?raw=true"></a>
